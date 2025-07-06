@@ -1,17 +1,11 @@
 {
   "name": "cuda-toolkit",
-  "version": "0.2.24",
   "description": "GitHub Action to install the NVIDIA CUDA Toolkit",
-  "main": "lib/main.js",
-  "scripts": {
-    "build": "tsc --newLine lf",
-    "format": "prettier --write **/*.ts jest.config.js",
-    "format-check": "prettier --check **/*.ts jest.config.js",
-    "lint": "eslint src/**/*.ts __tests__/**/*.ts",
-    "package": "ncc build",
-    "test": "jest",
-    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
-  },
+  "version": "0.2.26",
+  "author": "Jim Verheijde",
+  "type": "module",
+  "private": true,
+  "homepage": "https://github.com/Jimver/cuda-toolkit",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jimver/cuda-toolkit.git"
