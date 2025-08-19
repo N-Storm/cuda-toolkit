@@ -6,15 +6,15 @@
 name: Check dist/
 
 on:
+  pull_request:
+    branches:
+      - master
   push:
     branches:
-      - main
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    paths-ignore:
-      - '**.md'
-  workflow_dispatch:
+      - master
+
+permissions:
+  contents: read
 
 jobs:
   check-dist:
