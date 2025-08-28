@@ -65,7 +65,7 @@ jobs:
         os: [ubuntu-22.04, ubuntu-20.04]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: Jimver/cuda-toolkit@master
+    - uses: N-Storm/cuda-toolkit@master
       id: cuda-toolkit
       with:
         log-file-suffix: '${{matrix.os}}.txt'
@@ -88,7 +88,7 @@ The path where cuda is installed (same as `CUDA_PATH` in `GITHUB_ENV`).
 
 ```yaml
 steps:
-- uses: Jimver/cuda-toolkit@v0.2.24
+- uses: N-Storm/cuda-toolkit@v0.2.27m
   id: cuda-toolkit
   with:
     cuda: '12.5.0'
