@@ -67,6 +67,8 @@ jobs:
           method: ${{matrix.method}}
           log-file-suffix: '${{matrix.method}}-${{matrix.os}}'
           use-github-cache: false
+          # FIXME: workaround to low disk space on ubuntu-22.x runners
+          use-local-cache: ${{ matrix.os == 'ubuntu-22.04' && matrix.method == 'local' && 'false' || 'true' }}
 
       - name: Run the action on this runner with nvcc and libcublas subpackages (Linux)
         if: runner.os == 'Linux' && matrix.method == 'network'
