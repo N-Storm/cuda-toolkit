@@ -62,7 +62,7 @@ jobs:
   CI:
     strategy:
       matrix:
-        os: [ubuntu-22.04, ubuntu-20.04]
+        os: [ubuntu-22.04, ubuntu-24.04]
     runs-on: ${{ matrix.os }}
     steps:
     - uses: N-Storm/cuda-toolkit@master
@@ -88,10 +88,10 @@ The path where cuda is installed (same as `CUDA_PATH` in `GITHUB_ENV`).
 
 ```yaml
 steps:
-- uses: N-Storm/cuda-toolkit@v0.2.27m
+- uses: N-Storm/cuda-toolkit@v0.2.28
   id: cuda-toolkit
   with:
-    cuda: '12.5.0'
+    cuda: '13.0.1'
 
 - run: echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"
 
