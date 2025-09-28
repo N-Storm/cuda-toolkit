@@ -20,18 +20,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        - { os: 'windows-2025', method: 'local' }
-        - { os: 'windows-2025', method: 'network' }
-        - { os: 'windows-2022', method: 'local' }
-        - { os: 'windows-2022', method: 'network' }
-        - { os: 'ubuntu-22.04', method: 'network' }
-        - { os: 'ubuntu-24.04', method: 'network' }
-        - { os: 'ubuntu-22.04-arm', method: 'network' }
-        - { os: 'ubuntu-22.04-arm', method: 'local' }
-        - { os: 'ubuntu-24.04-arm', method: 'network' }
-        - { os: 'ubuntu-24.04-arm', method: 'local' }
-#        os: [windows-2025, windows-2022, ubuntu-24.04, ubuntu-22.04, ubuntu-24.04-arm, ubuntu-22.04-arm]
-#        method: [local, network]
+        os: [windows-2025, windows-2022, ubuntu-24.04, ubuntu-22.04, ubuntu-24.04-arm, ubuntu-22.04-arm]
+        method: [local, network]
     runs-on: ${{ matrix.os }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
