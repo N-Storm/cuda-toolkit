@@ -276,7 +276,7 @@ function download(version, method, useLocalCache, useGitHubCache) {
                 core.debug(`Cached download to local machine cache at ${localCacheDirectory}`);
                 executableDirectory = localCacheDirectory;
             }
-            if (useGitHubCache) {
+            if (useGitHubCache && osType !== platform_1.OSType.windows) {
                 // Move file to GitHub cache directory
                 core.debug(`Copying ${destFilePath} to ${cacheDirectory}`);
                 yield io.mkdirP(cacheDirectory);
@@ -604,6 +604,10 @@ class LinuxLinks extends links_1.AbstractLinks {
         // Map of cuda SemVer version to download URL
         this.cudaVersionToURL = new Map([
             [
+                '13.0.2',
+                'https://developer.download.nvidia.com/compute/cuda/13.0.2/local_installers/cuda_13.0.2_580.95.05_linux.run'
+            ],
+            [
                 '13.0.1',
                 'https://developer.download.nvidia.com/compute/cuda/13.0.1/local_installers/cuda_13.0.1_580.82.07_linux.run'
             ],
@@ -869,6 +873,10 @@ class WindowsLinks extends links_1.AbstractLinks {
         super();
         this.cudaVersionToNetworkUrl = new Map([
             [
+                '13.0.2',
+                'https://developer.download.nvidia.com/compute/cuda/13.0.2/network_installers/cuda_13.0.2_windows_network.exe'
+            ],
+            [
                 '13.0.1',
                 'https://developer.download.nvidia.com/compute/cuda/13.0.1/network_installers/cuda_13.0.1_windows_network.exe'
             ],
@@ -1079,6 +1087,10 @@ class WindowsLinks extends links_1.AbstractLinks {
         ]);
         // Map of cuda SemVer version to download URL
         this.cudaVersionToURL = new Map([
+            [
+                '13.0.2',
+                'https://developer.download.nvidia.com/compute/cuda/13.0.2/local_installers/cuda_13.0.2_windows.exe'
+            ],
             [
                 '13.0.1',
                 'https://developer.download.nvidia.com/compute/cuda/13.0.1/local_installers/cuda_13.0.1_windows.exe'
