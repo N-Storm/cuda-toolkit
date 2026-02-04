@@ -12,6 +12,9 @@ on:
   push:
     branches:
       - master
+      - 'upstream-*'
+
+  workflow_dispatch:
 
 permissions:
   contents: read
