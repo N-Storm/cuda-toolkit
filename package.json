@@ -1,16 +1,22 @@
 {
   "name": "cuda-toolkit",
   "description": "GitHub Action to install the NVIDIA CUDA Toolkit",
-  "version": "0.2.31",
+  "version": "0.2.32",
   "author": "Jim Verheijde",
-  "homepage": "https://github.com/Jimver/cuda-toolkit#readme",
+  "contributors" : [
+    {
+      "name" : "N-Storm",
+      "url" : "https://github.com/N-Storm/"
+    }
+  ],
+  "homepage": "https://github.com/N-Storm/cuda-toolkit#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jimver/cuda-toolkit.git"
+    "url": "git+https://github.com/N-Storm/cuda-toolkit.git"
   },
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/Jimver/cuda-toolkit/issues"
+    "url": "https://github.com/N-Storm/cuda-toolkit/issues"
   },
   "volta": {
     "node": "20.12.2"
