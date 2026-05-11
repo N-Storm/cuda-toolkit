@@ -8,7 +8,7 @@ This action installs the [NVIDIA® CUDA® Toolkit](https://developer.nvidia.com/
 
 **Optional** The CUDA version to install. View `src/link/windows-links.ts` and `src/link/linux-links.ts` for available versions.
 
-Default: `'13.2.0'`.
+Default: `'13.2.1'`.
 
 ### `sub-packages`
 
@@ -88,10 +88,10 @@ The path where cuda is installed (same as `CUDA_PATH` in `GITHUB_ENV`).
 
 ```yaml
 steps:
-- uses: N-Storm/cuda-toolkit@v0.2.33
+- uses: N-Storm/cuda-toolkit@v0.2.34
   id: cuda-toolkit
   with:
-    cuda: '13.2.0'
+    cuda: '13.2.1'
 
 - run: echo "Installed cuda version is: ${{steps.cuda-toolkit.outputs.cuda}}"
 
